@@ -3,4 +3,8 @@ require "max.keymaps"
 require "max.plugins"
 require "max.colorscheme"
 require "max.cmp"
+require "max.lsp"
+require "max.telescope"
+require "max.treesitter"
+require "max.autopairs"
 

@@ -44,7 +44,7 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
-
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
 
   -- ++++++++++++++++++++++++ My custom plugins +++++++++++++++++++++++++++++++
 
@@ -53,7 +53,7 @@ return packer.startup(function(use)
   use "folke/tokyonight.nvim" -- Useful lua functions used by lots of plugins
   vim.g.tokyonight_style = "storm"
   vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
-  use "lunarvim/colorschemes" 
+  use "lunarvim/colorschemes"
   use "savq/melange"
 
   -- cmp plugins
@@ -62,19 +62,32 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
-
-
-
-
-
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  use 'nvim-telescope/telescope-media-files.nvim'
 
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "p00f/nvim-ts-rainbow"
+  use "nvim-treesitter/playground"
 
+  -- old vim plugins
+  use "tpope/vim-commentary"
+  use "tpope/vim-surround"
 
 
 
