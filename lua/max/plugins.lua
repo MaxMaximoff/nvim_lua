@@ -45,6 +45,11 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+  use 'kyazdani42/nvim-web-devicons'
+  use 'kyazdani42/nvim-tree.lua'
+  use "akinsho/bufferline.nvim"
 
   -- ++++++++++++++++++++++++ My custom plugins +++++++++++++++++++++++++++++++
 
@@ -72,6 +77,7 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -85,8 +91,11 @@ return packer.startup(function(use)
   use "p00f/nvim-ts-rainbow"
   use "nvim-treesitter/playground"
 
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+
+
   -- old vim plugins
-  use "tpope/vim-commentary"
   use "tpope/vim-surround"
 
 
@@ -100,8 +109,7 @@ return packer.startup(function(use)
 
 
 
-
-  -- ------------------------ My custom plugins --------------------------------
+  --------------------------- My custom plugins --------------------------------
 
 
 

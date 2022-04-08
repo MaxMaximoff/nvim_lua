@@ -7,4 +7,7 @@ require "max.lsp"
 require "max.telescope"
 require "max.treesitter"
 require "max.autopairs"
-
+require "max.comment"
+require "max.gitsigns"
+require "max.nvim-tree"
+require "max.bufferline"
